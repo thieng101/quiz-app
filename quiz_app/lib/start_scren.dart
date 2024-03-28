@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quiz_app/questions_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -16,7 +17,12 @@ class StartScreen extends StatelessWidget {
             style: TextStyle(fontSize: 20, color: Colors.white)),
         const SizedBox(height: 20),
         OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const QuestionsScreen()));
+            },
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: const Icon(Icons.keyboard_double_arrow_right),
             label: const Text("Start Quiz", style: TextStyle(fontSize: 20))),
