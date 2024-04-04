@@ -3,7 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:quiz_app/questions_screen.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  final void Function() changeScreen;
+
+  const StartScreen(this.changeScreen, {super.key});
 
   @override
   Widget build(context) {
@@ -18,10 +20,7 @@ class StartScreen extends StatelessWidget {
         const SizedBox(height: 20),
         OutlinedButton.icon(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const QuestionsScreen()));
+              changeScreen();
             },
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: const Icon(Icons.keyboard_double_arrow_right),
