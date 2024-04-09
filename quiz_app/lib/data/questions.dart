@@ -51,5 +51,6 @@ const questions = [
       'By calling updateUI()',
       'By calling updateState()',
     ],
+
   ),
 ];

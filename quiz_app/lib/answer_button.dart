@@ -3,9 +3,10 @@ import 'package:flutter/widgets.dart';
 
 class AnswerButton extends StatelessWidget {
   final String answer;
+  // final String selectedAnswer;
   final void Function() onTap;
 
-  const AnswerButton(this.answer, this.onTap, {super.key});
+  const AnswerButton({required this.answer,required this.onTap, super.key});
 
   @override
   Widget build(BuildContext context) {
